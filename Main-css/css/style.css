@@ -1,0 +1,390 @@
+:root
+{
+    --dark-color: #813919;
+    --main-color: #cdb38f;
+    --second-color: #eee0bb;
+    --white:#fff;
+    --black:#000;
+    --ff-anton: 'Anton', sans-serif;
+    --ff-sora: 'Sora', sans-serif;
+
+}
+
+/*********** reset *************/
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin:0;
+    padding: 0;
+    background-color: var(--white);
+    font-family: var(--ff-sora);
+}
+ul[class],
+ol[class]
+{
+    list-style-type: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+h2,
+h3,
+h1,
+p
+{
+  margin: 0;
+  padding: 0
+}
+
+/****************************/
+.title
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 1rem;  
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  font-family: var(--ff-anton);
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.title i
+{
+    font-size: 1rem;
+}
+
+
+/****************************/
+.main-cont
+{
+    margin-bottom: 4rem;
+}
+
+.main-cont,
+.flow-container
+{
+    padding: 1rem;
+}
+
+.my-img
+{
+   width: 100%;
+   height: 100%; 
+}
+
+.content-container
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.titles-cont
+{
+    width: 40%;
+    
+}
+
+.main-title,
+h1 
+{
+    font-family: var(--ff-anton);
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.main-title
+{
+    font-family: var(--ff-anton);
+    color: var(--main-color);
+}
+
+h1
+{
+    color: #a05e2b;
+    width: fit-content;
+}
+
+.sup-title
+{
+    margin-top: 0.5rem;
+    color: var(--main-color);
+}
+
+.sup-title a
+{
+    display: inline-block;
+    color: var(--black);
+}
+
+.sup-title a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: gray;
+    transition: width .4s ease-in;
+  }
+  
+.sup-title a:hover::after {
+    width: 100%; 
+    transition: all 0.4;
+  }
+
+.sup-title a:hover
+{
+   color: gray;
+    transition: all 0.4;
+}
+
+.my-img-container
+{
+    width: 40%;
+}
+
+.nav-list
+{
+    position: fixed;
+    z-index: 99999;
+    bottom: 1rem;
+    left: 20%;
+    margin: 0;
+    width: 60%;
+    border-radius: 30px;
+    transition: all 0.3s;
+    display: flex;
+    font-family: var(--ff-sora);
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding:1.5rem 1rem;
+    background-color: var(--dark-color);
+    transition: all 0.3s;
+}
+
+.nav-list-item a
+{
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav-list-item a:hover
+{
+    opacity: 0.75;
+    transition: all 0.3s;
+}
+
+.nav-list-item i
+{
+    color: var(--white);
+    font-size: 0.7rem;   
+}
+/***********************************/
+.projects-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+.project
+{
+    width: 100%;
+    height: 100%;  
+}
+.project-img 
+{
+    width: inherit;
+    height: inherit;
+}
+
+.project-info
+{
+    opacity: 0;
+    color: var(--white);
+    background-color: rgba(0,0,0,0.85);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: all 0.5s;
+}
+
+.project-info > * + *
+{
+    margin-top: 0.5rem;
+}
+
+.project-info h2
+{
+    font-size: 0.85rem;
+}
+
+.project-info p
+{
+    font-size: 0.75rem;
+}
+
+.project-tags
+{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
+.project-tag
+{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    padding: .3rem .25rem;
+    border-radius: 10px;
+}
+
+.incompleted-tag
+{
+    color: red;
+    background-color:pink ;
+}
+
+.project-link
+{
+    display: inline-block;
+    box-shadow: 0px 0px 20px 1px rgba(182, 182, 182 , 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 30%;
+    height: 200px;
+    position: relative;
+}
+
+.project-link:hover
+{
+    .project-img
+    {
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
+
+    .project-info
+    {
+        opacity: 1;
+        transition: all 0.5s;
+    }
+    
+}
+
+
+/**********************************/
+.contact-list
+{
+    width: fit-content;
+    margin:0 auto;
+    padding: 0;
+}
+
+.contact-list-item
+{
+    color: #a05e2b;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.contact-list-item i
+{
+    margin-right: 1rem;
+    font-size: 2.5rem;
+}
+/*******************************/
+.media-container
+{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 2rem;
+}
+
+.media-list
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.media-container p
+{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark-color);
+}
+
+.media-container i
+{
+    color: var(--black);
+}
+
+.media-container i:hover
+{
+    color: #c66;
+    font-size: 2.15rem;
+    transition: all 0.3s;
+}
+/************************************/
+
+.current
+{
+    text-decoration: underline solid var(--white);
+    opacity: 1 !important;
+}
+/*animimations*/
+.typewriter  {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--black); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 ; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 2px; /* Adjust as needed */
+    animation: 
+      typing 2s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 55% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--black); }
+  }
